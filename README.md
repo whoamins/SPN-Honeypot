@@ -36,8 +36,19 @@ Run the *sheduler.ps1*. It will create task in the TaskSheduler and will run it 
 PS > ./sheduler.ps1
 ```
 
+# How it will notify me?
+If honeypot has been triggered, you will see Windows 10 notification on the right bottom corner (default windows 10 notification)
+
+![image](https://user-images.githubusercontent.com/66217512/157062031-3f52bc72-411f-48f2-b110-04657388b9f3.png)
+
+
 # Change the script start time
 
 If you want to run the script every 2 minutes for instance. You should change this on the third line in *sheduler.ps1* and on the second line in *script.ps1*.
 
 **Attention**: In the *script.ps1* you should change the time in seconds. (300 = 5 min, 120 = 2 min).
+
+# TODO
+
+1. Create account for email notification.
+2. Notify admins by email
