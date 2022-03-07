@@ -36,7 +36,7 @@ Run the *sheduler.ps1*. It will create task in the TaskSheduler and will run it 
 PS > ./sheduler.ps1
 ```
 
-# change the script start time
+# Change the script start time
 
 If you want to run the script every 2 minutes for instance. You should change this on the third line in *sheduler.ps1* and on the second line in *script.ps1*.
 
