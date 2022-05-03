@@ -119,6 +119,20 @@ If ($ip -ne $null)  {
     $balloon.BalloonTipTitle = "Kerberoasting Detected!" 
     $balloon.Visible = $true 
     $balloon.ShowBalloonTip(5000)
+
+    $mailPass = Get-Content "C:\Users\Administrator\Desktop\password.txt"
+
+    $mailPass = ConvertTo-SecureString $mailPass
+    $mailPass = [System.Net.NetworkCredential]::new("", $mailPass).Password
+    echo $mailPass
+
+    $Message = new-object Net.Mail.MailMessage 
+    $smtp = new-object Net.Mail.SmtpClient("192.168.56.102", 25) # SMTP Server IP Address and SMTP PORT (Default: 25)
+    $smtp.Credentials = New-Object System.Net.NetworkCredential("test@test.com", $mailPass); 
+    $smtp.Timeout = 40000
+    $Message.From = "test@test.com" 
+    $Message.To.Add("testik@test.com") 
+    $smtp.Send($Message)
 }
 Else {
     echo "Null"
