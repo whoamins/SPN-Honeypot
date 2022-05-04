@@ -50,7 +50,7 @@ If you want to run the script every 2 minutes for instance. You should change th
 
 # TODO
 
-1. Create account for email notification.
-2. Notify admins by email
-3. GUI with alert history
-4. Connection with some SIEM systems
+
+1. GUI with alert history
+2. Connection with some SIEM systems
+3. Update guide
