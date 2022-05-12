@@ -54,3 +54,4 @@ If you want to run the script every 2 minutes for instance. You should change th
 1. GUI with alert history
 2. Connection with some SIEM systems
 3. Update guide
+4. More secure password storage...
