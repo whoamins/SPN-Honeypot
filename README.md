@@ -55,4 +55,5 @@ If you want to run the script every 2 minutes for instance. You should change th
 2. Connection with some SIEM systems
 3. Update guide
 4. More secure password storage...
-5. Add the ability to choose service exe file
+5. Add the ability to choose service exe file6
+6. Check results code - [info](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4769)
