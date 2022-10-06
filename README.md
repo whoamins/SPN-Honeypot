@@ -10,36 +10,32 @@ Kerberos clients will never request a TGS ticket for a false SPN, so if the corr
 Download the archive with scripts and extract it to some place
 
 ## Step 2
-Run the *create.ps1* script. It will create fake account and SPN.
+Run the *script.ps1* script. It will create fake account and SPN.
 
 ```
-PS > ./create.ps1
+PS > ./script.ps1
 ```
 
-If you can't start script because you have Restricted execution policy - Try this command and again try to run *create.ps1*
+If you can't start script because you have Restricted execution policy - Try this command and again try to run *script.ps1*
 
 ```
 PS > powershell -ep bypass
 ```
 
 ## Step 3
-Open the file named *sheduler.ps1* and change path to *script.ps1* on the first line
+After installation - delete plain text password from the script, because it already unnecessary
 
-```
-$action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument '-File C:\Users\Administrator\Desktop\script.ps1'
-```
+For example, set the value to 1.
 
-## Step 4
-Run the *sheduler.ps1*. It will create task in the TaskSheduler and will run it every 5 minutes.
+![изображение](https://user-images.githubusercontent.com/66217512/194409894-2e45def3-c870-4046-a47b-61615cea4589.png)
 
-```
-PS > ./sheduler.ps1
-```
 
 # How it will notify me?
 If honeypot has been triggered, you will see Windows 10 notification on the right bottom corner (default windows 10 notification)
 
 ![image](https://user-images.githubusercontent.com/66217512/157062031-3f52bc72-411f-48f2-b110-04657388b9f3.png)
+
+![изображение](https://user-images.githubusercontent.com/66217512/194408763-58e04bf6-65d6-4a7a-b701-95f0158b19b4.png)
 
 
 # Change the script start time
