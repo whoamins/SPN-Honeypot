@@ -115,7 +115,7 @@ Function ADAuth {
 $ErrorActionPreference= 'silentlycontinue'
 
 # Configuration variables
-$PSEmailServer="10.11.1.184" # SMTP Server
+$PSEmailServer="10.11.1.184"
 $from = "kerberoasting <kerberoasting@domain.com>"
 $to = "soc <soc@domain.com>"
 $name = 'svc_backup'
@@ -128,7 +128,6 @@ $binaryPathName = "C:\Windows\System32\calc.exe"
 
 if(Get-ScheduledTaskInfo -TaskName BackupTask) {
     try {
-        ADAuth -username $name -password $serviceAccountPassword # Update LastLogon
         $ip = Get-WinEvent -FilterHashtable @{Logname="Security";ID=4769;starttime=(date).AddSeconds(($schedulerInterval * 60) * -1);endtime=date} | Convert-EventLogRecord | Where-Object -Property ServiceName -Contains $name | select IPAddress
         $ip = $ip.IpAddress.split(':')[-1]
     } catch [Exception] {
