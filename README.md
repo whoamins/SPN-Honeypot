@@ -16,7 +16,7 @@ Run the *script.ps1* script. It will create fake account and SPN.
 PS > ./script.ps1
 ```
 
-If you can't start script because you have Restricted execution policy - Try this command and again try to run *script.ps1*
+If you can't start script because you have Restricted execution policy - Try this command and try to run *script.ps1* again
 
 ```
 PS > powershell -ep bypass
