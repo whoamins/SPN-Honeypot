@@ -1,4 +1,7 @@
 # SPN-Honeypot
+
+### The script is not finished. It cannot be used in a production environment at this time.
+
 Detect Kerberoasting.
 
 There is an effective way to detect Kerberoasting, which is to create an account and an SPN that will not be used (the created SPN is not associated with any real service). 
